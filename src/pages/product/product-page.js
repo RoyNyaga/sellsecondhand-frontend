@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavigationBar from "../../components/navbar"
 
 class ProductPage extends Component {
   constructor(props) {
@@ -7,7 +8,9 @@ class ProductPage extends Component {
   }
   render() { 
     return (  
-      <h1>This is products page</h1>
+      <div>
+        <NavigationBar/>
+      </div>
     );
   }
 }
