@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Navbar, Nav, NavDropdown, Form, FormControl} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import styled from 'styled-components';
+import SearchForm from "./searchForm"
  
 class NavigationBar extends Component {
   constructor(props) {
@@ -9,22 +9,40 @@ class NavigationBar extends Component {
   }
   render() { 
     return (  
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Form inline>
-              <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-            <Nav className="mr-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-            </Nav>            
-          </Navbar.Collapse>
+      <Navbar>
+        <div class="upper-nav-container">
+					<div class="nav-logo-container">
+            <h2>All-In-One</h2>
+          </div>
+          <div class="nav-search-container">
+            <SearchForm/>
+          </div>
+          <div class="nav-links-container">
+            <ul class="testing">
+              <li><a class="nav-links" href="#">Home</a></li>
+              <li><a class="nav-links scrolling-link" href="#services-link">services</a></li>
+              <li><a class="nav-links scrolling-link" href="#about-link">About</a></li>
+              <li><a class="nav-links scrolling-link" href="#reviews">Events</a></li>
+              <li><a class="nav-links scrolling-link" href="#contact-link">Contact</a></li>
+              <li><a class="nav-links scrolling-link" href="#contact-link">book online</a></li>
+            </ul>
+          </div>
+          <div class="nav-toggle-container">Toggle</div>
+        </div>
       </Navbar>
     );
   }
 }
+
+const Navbar = styled.nav`
+  .upper-nav-container{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  
+`;
  
 export default NavigationBar;
