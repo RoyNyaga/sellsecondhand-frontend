@@ -1,33 +1,45 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import SearchForm from "./searchForm"
+import { BsFillBootstrapFill, BsJustify } from "react-icons/bs";
+import NavLinks from './navLinks'
+import NavLinksPhone from './navLinksPhone'
+
+
  
 class NavigationBar extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.toggleNav = this.toggleNav.bind(this)
   }
+
+  toggleNav = () => {
+
+  }
+
+
   render() { 
     return (  
       <Navbar>
-        <div class="upper-nav-container">
-					<div class="nav-logo-container">
-            <h2>All-In-One</h2>
+        <div className="overall-nav-wrapper">
+          <div className="upper-nav-container">
+            <div className="nav-logo-container">
+              <BsFillBootstrapFill/>
+            </div>
+            <div className="nav-search-container">
+              <SearchForm/>
+            </div>
+            <div className="nav-links-container">
+              <NavLinks/>
+            </div>
+            <div className="nav-toggle-container" onClick={this.toggleNav}>
+              <BsJustify/>
+            </div>
           </div>
-          <div class="nav-search-container">
-            <SearchForm/>
+
+          <div className="lower-nav-container disappear">
+            <NavLinksPhone/>
           </div>
-          <div class="nav-links-container">
-            <ul class="testing">
-              <li><a class="nav-links" href="#">Home</a></li>
-              <li><a class="nav-links scrolling-link" href="#services-link">services</a></li>
-              <li><a class="nav-links scrolling-link" href="#about-link">About</a></li>
-              <li><a class="nav-links scrolling-link" href="#reviews">Events</a></li>
-              <li><a class="nav-links scrolling-link" href="#contact-link">Contact</a></li>
-              <li><a class="nav-links scrolling-link" href="#contact-link">book online</a></li>
-            </ul>
-          </div>
-          <div class="nav-toggle-container">Toggle</div>
         </div>
       </Navbar>
     );
@@ -36,12 +48,57 @@ class NavigationBar extends Component {
 
 const Navbar = styled.nav`
   .upper-nav-container{
+    background: #100e17;
+    margin: 0px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+    border-bottom: 5px solid #ff8a01;
   }
 
+  .lower-nav-container{
+    background: #100e17c7;
+    margin: -16px;
+  }
+
+  .disappear{
+    display: none;
+  }
+
+  .appear{
+    display: block;
+  }
+
+  .nav-search-container{
+    background: green;
+  }
+
+  .nav-logo-container{
+    background: #ff8a01;
+    font-size: 4em;
+  }
+
+  .nav-toggle-container{
+    color: #ff8a01;
+    font-size: 3em;
+    display: none;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .nav-search-container {
+      display: none; 
+    }
+
+    .nav-toggle-container{
+      display: block;
+    }
+
+    .nav-links-container{
+      display: none;
+    }
+  }
   
 `;
  
