@@ -14,7 +14,8 @@ class NavigationBar extends Component {
   }
 
   toggleNav = () => {
-
+    let phoneNav = document.querySelector(".lower-nav-container");
+    console.log(phoneNav.classList.toggle("disappear"))
   }
 
 
