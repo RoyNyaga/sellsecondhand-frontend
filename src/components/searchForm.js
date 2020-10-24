@@ -29,7 +29,7 @@ const Wrapper = styled.form`
 
   @media only screen and (max-width: 768px) {
     input {
-      width: 250px;
+      width: 200px;
     }
   }
 

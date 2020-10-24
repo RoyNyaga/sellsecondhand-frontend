@@ -18,7 +18,6 @@ class NavigationBar extends Component {
     console.log(phoneNav.classList.toggle("disappear"))
   }
 
-
   render() { 
     return (  
       <Navbar>
@@ -61,7 +60,8 @@ const Navbar = styled.nav`
 
   .lower-nav-container{
     background: #100e17c7;
-    margin: -16px;
+    margin-top: -16px;
+    width: 100%;
   }
 
   .disappear{
