@@ -5,7 +5,7 @@ const ProductCard = () => {
   return (  
     <Wrapper>
       <div className="card-image-div">
-        <img src="https://res.cloudinary.com/it-s-tech/image/upload/v1603051695/6x6wert_wat74g.jpg"/>
+        <img src="https://res.cloudinary.com/it-s-tech/image/upload/v1586988017/WhatsApp_Image_2020-04-15_at_10.55.28_PM_koab5q.jpg"/>
       </div>
       <div className="card-body">
         <h1 className="general-color reduced-h1">This is the title of the product</h1>
