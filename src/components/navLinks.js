@@ -8,7 +8,7 @@ const NavLinks = () => {
       <li><a className="nav-links scrolling-link" href="#services-link">services</a></li>
       <li><a className="nav-links scrolling-link" href="#about-link">About</a></li>
       <li><a className="nav-links scrolling-link" href="#reviews">Events</a></li>
-      <li><a className="nav-links scrolling-link" href="#contact-link">Contact</a></li>
+      <li><a className="nav-links scrolling-link" href="#contact-link">Contactme</a></li>
       <li><a className="nav-links scrolling-link" href="#contact-link">book online</a></li>
     </Wrapper>
   );
